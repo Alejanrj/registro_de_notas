@@ -1,30 +1,37 @@
 def main():
-    
+
+    base_datos = []
+
     while True:
         print("\n--- SISTEMA DE REGISTRO DE NOTAS ---")
-        print("1. Registrar ingreso")
+        print("1. Registrar ingreso (Nombre)")
         print("2. Registrar nota")
         print("3. Ver promedio")
         print("4. Salir")
         
-        opcion = input("Por favor, selecciona una opción (1-4): ")
+        opcion = input("Selecciona una opción (1-4): ")
         
         if opcion == '1':
-            print("\n[Has elegido: Registrar ingreso] ")
+            nombre = input("Ingresa el nombre del estudiante: ")
+            estudiante = {
+                "nombre": nombre,
+                "nota": 0.0
+            }
+        
+            base_datos.append(estudiante)
+            print(f" Estudiante '{nombre}' registrado con éxito.")
             
         elif opcion == '2':
-            print("\n[Has elegido: Registrar nota] ")
+            print("\n[Opción 2 ]")
             
         elif opcion == '3':
-            print("\n[Has elegido: Ver promedio] ")
+            print("\n[Opción 3 ]")
             
         elif opcion == '4':
-            print("\nSaliendo del sistema... ¡Hasta luego!")
-            break 
-            
+            print("Saliendo... ")
+            break
         else:
-        
-            print("\n❌ Opción no válida. Por favor intenta de nuevo.")
+            print(" Opción no válida.")
 
 if __name__ == "__main__":
     main()
